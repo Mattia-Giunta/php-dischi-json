@@ -32,10 +32,75 @@
 
     <title>Dischi PHP</title>
 </head>
-<body>
+<body data-bs-theme="dark">
+   
+    <div id="app">
+
+
+        <main class="text-center position-relative vh-100 ">
     
+            <h1>Dischi</h1>
+    
+    
+            <section class="container mt-2z ">
+    
+                <div class="row row-cols-4 g-2" >
+    
+                    <div 
+                    class=" p-2 col"  
+                    v-for="(element,index) in list"
+                    :key="index"
+                    >
+    
+                        <div class="card" style="background-color: #112030;">
+                            
+                            <img :src="element.poster" class="card-img-top" alt="element.title">
+        
+                            <div class="card-body h-25 ">
+        
+                                <h5 class="card-title">{{element.title}}</h5>
+                                <p class="card-text">{{element.author}}</p>
+                                <h4 class="card-text">{{element.year}}</h4>
+        
+                            </div>
+
+                        </div>
+
+    
+                    </div>
+    
+    
+                </div>
+    
+            </section>
+
+            <section class="position-absolute  w-75 h-75 top-50 start-50 translate-middle "
+            style="background-color: rgba(17, 32, 49, 0.89); ">
+
+                <div class="position-absolute top-50 start-50 translate-middle ">
+
+                    <div class="card" >
+
+                        <img src="https://upload.wikimedia.org/wikipedia/en/0/03/Iron_Maiden_-_Brave_New_World.jpg" class="card-img-top" alt="...">
+
+                        <div class="card-body">
+
+                          <h5 class="card-title">Card title</h5>
+                          <p class="card-text">Authore</p>
+                          <p class="card-text">Anno</p>
+
+                        </div>
+
+                    </div>
+
+                </div>
 
 
+            </section>
+    
+        </main>
+        
+    </div>
 
 
 
