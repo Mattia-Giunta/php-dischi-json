@@ -50,6 +50,7 @@
                     class=" p-2 col"  
                     v-for="(element,index) in list"
                     :key="index"
+                    @click="getDisco(index)"
                     >
     
                         <div class="card" style="background-color: #112030;">
@@ -75,19 +76,23 @@
             </section>
 
             <section class="position-absolute  w-75 h-75 top-50 start-50 translate-middle "
+            id="overlay"
+            v-if="showDiscoSingolo"
+            @click="closeOverlay"
+            @click.ctrl="closeOverlay"
             style="background-color: rgba(17, 32, 49, 0.89); ">
 
                 <div class="position-absolute top-50 start-50 translate-middle ">
 
                     <div class="card" >
 
-                        <img src="https://upload.wikimedia.org/wikipedia/en/0/03/Iron_Maiden_-_Brave_New_World.jpg" class="card-img-top" alt="...">
+                        <img :src="discoSingolo.poster" class="card-img-top" :alt="discoSingolo.title">
 
                         <div class="card-body">
 
-                          <h5 class="card-title">Card title</h5>
-                          <p class="card-text">Authore</p>
-                          <p class="card-text">Anno</p>
+                          <h5 class="card-title">{{discoSingolo.title}}</h5>
+                          <p class="card-text">{{discoSingolo.title}}</p>
+                          <p class="card-text">{{discoSingolo.title}}</p>
 
                         </div>
 
